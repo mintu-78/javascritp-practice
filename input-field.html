@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input field</title>
+    <script>
+        function getInputFieldValue(){
+            let inputValue=document.getElementById('name').value
+            console.log(inputValue);
+            document.getElementById('heading').innerText=inputValue
+            
+        }
+        function steInputFieldValue(){
+            let value="code step by step"
+            document.getElementById('name').value=value
+        }
+        function removeInputFieldValue(){
+            document.getElementById('name').value=""
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1 id="heading"></h1>
+    <input type="text" id="name" placeholder="enter name">
+    <br><br>
+    <button onclick="getInputFieldValue()">Get Value</button>
+    <button onclick="steInputFieldValue()">Set Value</button>
+    <button onclick="removeInputFieldValue()">Remove Value</button>
+</body>
+</html>
