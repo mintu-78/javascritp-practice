@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input field style validation </title>
+</head>
+<body>
+    <input type="text" onblur="validateInputField(event)" id="user" placeholder="Enter User Name">
+    <br>
+    
+    <span style="color: aqua;" id="user-message"></span>
+    <script>
+        function validateInputField(event){
+            console.log(event.target.value);
+            let val = event.target.value;
+            let validateEl= document.getElementById("user-message")
+            validateEl.style.display="block"
+            if(val.length<4){
+                validateEl.textContent= "min valid length is 4"
+            }else if(val.length>10){
+                validateEl.textContent= "max valid length is 10"
+            }else{
+                validateEl.textContent=""
+                validateEl.style.display="none"
+            }
+            
+
+        }
+    </script>
+    
+</body>
+</html>
