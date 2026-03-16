@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Delete Element</title>
+</head>
+
+<body>
+    <h1>Delete Array in JavaScript</h1>
+    <span> Delete Array Element</span>
+    <input type="text" onblur="deleteItem(event)" placeholder="enter position">
+</body>
+<script>
+    let users = ["uday", "ajay", "parbhat", "deepak","vivek"]
+    // console.log(users);
+    // users.shift();
+    // users.pop();
+    // users.splice(1,2)
+    console.log(users);
+
+    function deleteItem(event) {
+        let pos = event.target.value;
+        if (pos > users.length - 1) {
+            alert("position not valid")
+        } else {
+            users.splice(pos, 1)
+            console.log(users);
+        }
+
+
+    }
+
+</script>
+
+</html>
