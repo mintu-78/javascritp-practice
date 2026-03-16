@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Add Element</title>
+</head>
+
+<body>
+    <h1>Add Item In Array</h1>
+    <span>Element Position</span>
+    <input type="text" id="position" placeholder="enter position">
+    <br>
+    <span>Element Value</span>
+    <input type="text" id="value" placeholder="enter Value">
+    <br>
+    <button onclick="addElement()">Add Element</button>
+</body>
+<script>
+    let fruits = ["Apple", "Banana", "Orange", "Mango",]
+    console.log(fruits);
+    // fruits.push("Papaya");
+    // fruits.unshift("Papaya")
+    // fruits.splice(1,0,"fruits1","fruits2")
+    // console.log(fruits);
+
+    function addElement() {
+        let val = document.getElementById('value').value;
+        let pos = document.getElementById('position').value;
+        fruits.splice(pos, 0, val)
+        console.log(fruits);
+
+
+    }
+
+
+</script>
+
+</html>
