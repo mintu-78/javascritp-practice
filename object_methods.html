@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Methods</title>
+</head>
+<body>
+    <h1>Object Methods</h1>
+    <script>
+        let userDetails ={
+            name:"Mintu Kumar",
+            age: 29,
+            city:"grugaon",
+            greet:function(){
+                // console.log("Hello user, how are you?");
+                return "Hello "+this.name+" , How are you";
+                
+            },
+            hello:function(from){
+            //  return "Hello "+this.name+",How are you? this is "+ from;
+            return this.greet() +"this is "+ from;
+            }
+
+        }
+        // userDetails.greet();
+        console.log(userDetails.hello("peter"));
+        
+        
+    </script>
+</body>
+</html>
