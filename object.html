@@ -8,17 +8,52 @@
 <body>
     <h1>Object</h1>
     <script>
-        let userDetails={
-            name: "mintu",
-            age: 29,
-            city: 'Delhi',
-            address:{
-                houseNo:111,
-                sector:20,
-                city:'grugaon'
-            }
+        // let userDetails={
+        //     name: "mintu",
+        //     age: 29,
+        //     city: 'Delhi',
+        //     address:{
+        //         houseNo:111,
+        //         sector:20,
+        //         city:'grugaon'
+        //     }
+        // }
+        // let key="age"
+    let iphone = {
+        brand: "Apple",
+        model: "iPhone 17",
+        price: 120000,
+        specs: {
+            ram: "8GB",
+            storage: "256GB",
+            camera: "48MP",
+            battery: "4500mAh"
         }
-        let key="age"
+    }
+
+    // // 1. Direct access
+    // console.log(iphone.model); // iPhone 17
+
+    // // 2. Bracket access
+    // let key = "price";
+    // console.log(iphone[key]); // 120000
+
+    // // 3. Nested object
+    // console.log(iphone.specs.camera); // 48MP
+
+    // // 4. Update price
+    // iphone.price = 115000;
+
+    // // 5. Add new property
+    // iphone.color = "Black";
+
+    // // 6. Delete property
+    // delete iphone.brand;
+
+    // 7. Loop
+    for(let key in iphone){
+        console.log(key, ":", iphone[key]);
+    }
         // console.log(userDetails[key]);
         // console.log(userDetails["age"]);
         // console.log(userDetails.age);
@@ -27,7 +62,7 @@
 
         // delete userDetails.city
 
-        console.log(userDetails.address.houseNo);
+        // console.log(userDetails.address.houseNo);
         
 
         // // for(let key in userDetails){
