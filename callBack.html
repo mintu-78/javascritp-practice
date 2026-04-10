@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+<body>
+    <h1>CallBack function</h1>
+    <script>
+        // function greet (name,callback){
+        //     console.log("hello",name);
+        //     callback(name)
+            
+        // }
+        // function bye(userName){
+        //     console.log("good bye",userName);
+
+            
+        // }
+        // greet("Mintu",function(userName){
+        //     console.log("Good Bye",userName);
+            
+        // })
+
+        // setTimeout(() => {
+        //     console.log("Mintu");
+            
+        // }, 2000);
+
+        // const arrayCallBack=(item)=>{
+        //     console.log(item);
+            
+        // }
+        // let data =["Mintu","Ajay","Sahil"];
+        // data.forEach(arrayCallBack)
+
+
+        function makeAPICall(callback){
+            setTimeout(() => {
+                const user ={
+                    name:"Mintu kumar",
+                    channel:"practice javaScript"
+                }
+                callback(user)
+                
+            },2000);
+            
+        }
+        function handleData(data){
+            console.log(data);
+            
+        }
+        makeAPICall(handleData)
+    </script>
+</body>
+</html>
