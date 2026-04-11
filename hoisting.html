@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting in JavaScript</title>
+</head>
+<body>
+    <h1>Hoisting in JavaScrip</h1>
+    <script>
+
+        console.log(fruit);
+        
+//  fruit() // TypeError: fruit is not a function
+        var fruit = function(){
+            console.log("apple fruit function");
+            
+        }
+       
+
+        // console.log(fruit);// undefined
+        // var fruit="Apple";
+        // console.log(fruit);// print Apple
+        
+
+
+        // fruit()
+        // function fruit(){
+        //     console.log("fruit function");
+            
+        // }
+
+
+        
+
+    </script>
+</body>
+</html>
