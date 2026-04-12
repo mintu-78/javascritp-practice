@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of Promise</title>
+</head>
+
+<body>
+
+    <h1>Example of Promise</h1>
+    <script>
+        // const url = "https://dummyjson.com/products";
+        // const apiResust = fetch(url);
+        // console.log(apiResust);
+        // apiResust.then((response)=>{
+        //     response.json().then((result)=>{
+        //         console.log(result);
+
+        //     })
+        // })
+
+        async function apiHandling() {
+            const url = "https://dummyjson.com/products";
+            let apiResust = await fetch(url);
+            apiResust = await apiResust.json();
+            console.log(apiResust);
+
+        }
+        apiHandling();
+
+    </script>
+</body>
+
+</html>
