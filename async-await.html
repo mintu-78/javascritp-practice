@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+
+<body>
+    <h1>Async Await</h1>
+    <script>
+        const loginPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve({ login: true, name: 'Mintu kumar' })
+            }, 2000);
+
+        })
+
+
+        const tokenPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve({ token: 'mintu@9263' })
+            }, 3000);
+
+        })
+        // loginPromise.then((result)=>{
+        //     console.log(result);
+
+
+        async function handleLoginPromise() {
+            const result = await loginPromise;
+
+            console.log(result);
+        }
+        handleLoginPromise();
+
+        async function handleTokenPromise() {
+            const tokenResult = await tokenPromise;
+
+            console.log(tokenPromise);
+
+        }
+
+        handleTokenPromise();
+    </script>
+</body>
+
+</html>
