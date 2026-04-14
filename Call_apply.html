@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Apply in JavaScript</title>
+</head>
+
+<body>
+    <h1>Call, Apply in JavaScript</h1>
+    <script>
+        const user = {
+            name: 'mintu kumar ',
+            age: 20,
+            showDeatials: function () {
+                console.log("my name is " + this.name + " and my age is " + this.age);
+
+            }
+        }
+
+        const admin = {
+            name: 'peter',
+            age: 21,
+
+        }
+
+        const student = {
+            name: 'sam',
+            age: 18,
+        }
+
+        function showDeatials(city) {
+            console.log("my name is " + this.name + " and my age is " + this.age + "my city is " + city);
+
+        }
+
+        showDeatials.call(user, "jharkhand")
+        // user.showDeatials();
+
+        // user.showDeatials.call(admin)
+        // user.showDeatials.call(student)
+    </script>
+</body>
+
+</html>
