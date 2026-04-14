@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword with Arrow function</title>
+</head>
+<body>
+    <h1>This keyword with Arrow function</h1>
+    <script>
+        userName="Prajapati"
+        const userData={
+            userName:'Mintu kumar',
+            // getName:function(){
+            //     console.log(this.userName);
+                
+            // }
+
+
+            // getName:()=>{
+            //     console.log(this.userName);
+                
+            // }
+
+
+            print:function(){
+                setTimeout(() => {
+                    console.log(this.userName);
+                    
+                }, 0);
+            }
+        }
+        userData.print()
+    </script>
+</body>
+</html>
