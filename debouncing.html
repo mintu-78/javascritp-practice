@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce</title>
+</head>
+<body>
+    <script>
+        let timer;
+        function callAPI(){
+            console.log("api call done");
+
+            
+        }
+
+        function handleSearch(){
+            clearTimeout(timer)
+
+             timer= setTimeout(() => {
+                callAPI()
+            },1000);
+        }
+    </script>
+
+    <h1>Debounce in JavaScript</h1>
+    <input type="text" onkeypress="handleSearch()" placeholder="enter something for search">
+    
+</body>
+</html>
