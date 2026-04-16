@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttling </title>
+    <style>
+        .block {
+            width: 200px;
+            background-color: #ddd;
+            overflow: scroll;
+            height: 300px;
+        }
+    </style>
+    <script>
+        function callAPI() {
+            console.log(" API  function called");
+
+        }
+        let lastCall = 0;
+        function handleScroll() {
+            let now = Date.now();
+            if (now - lastCall >= 2000) {
+                lastCall = now;
+                callAPI()
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="block" onscroll="handleScroll()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+        reprehenderit distinctio ullam repellat odit voluptas reiciendis esse voluptatibus veniam repudiandae aliquid,
+        itaque dolores praesentium quidem amet repellendus. Harum, debitis quia. Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Exercitationem esse quibusdam architecto non adipisci quis repellendus perspiciatis recusandae
+        cupiditate et. Eligendi odit debitis nobis, veniam temporibus aut! Facilis, porro nisi? Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Illo aliquid incidunt, soluta aperiam dolores ducimus ipsam, expedita
+        consectetur, veniam saepe dolore. Delectus, iste. Ipsam ea assumenda quaerat ratione? Similique, ratione. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis labore asperiores illo error totam libero
+        cum exercitationem fugiat eius, deserunt aut sed cupiditate quia ad rem magni. Maxime, optio! Lorem ipsum dolor,
+        sit amet consectetur adipisicing elit. Earum autem laudantium officia veniam placeat quidem nostrum, ex itaque
+        deleniti facere inventore saepe vitae accusantium eligendi animi illo obcaecati, eveniet quo. Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Enim, facere, expedita consequatur numquam itaque eligendi a maiores sit
+        mollitia suscipit accusamus maxime excepturi aspernatur adipisci ipsam aliquam? Nam, natus earum! Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Nesciunt tenetur laudantium, corrupti commodi neque eum modi ipsa
+        saepe vitae veniam molestiae laboriosam nemo excepturi cupiditate fugit amet. Nisi, repellendus ipsa! Lorem
+        ipsum dolor, sit amet consectetur adipisicing elit. Amet necessitatibus consequatur sed assumenda maiores in
+        dolorem vitae veniam delectus minima, culpa, magni mollitia dignissimos dicta minus quisquam quibusdam et!
+        Cumque.</div>
+
+</body>
+
+</html>
