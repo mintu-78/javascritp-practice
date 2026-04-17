@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Chaining</title>
+</head>
+
+<body>
+    <h1>Function Chaining</h1>
+
+    <script>
+        const obj = {
+            value: 0,
+            add(a) {
+                this.value += a
+
+                
+
+                return this
+
+
+            },
+            sub(a) {
+                this.value -= a
+                return this
+
+            },
+            mul(a) {
+                this.value *= a
+                return this
+            },
+            print() {
+                return this.value
+
+            }
+        }
+        console.log(obj.add(100).sub(5).mul(10).print());
+
+    </script>
+
+</body>
+
+</html>
