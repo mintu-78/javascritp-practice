@@ -21,14 +21,22 @@
         //     })
         // })
 
-        async function apiHandling() {
-            const url = "https://dummyjson.com/products";
-            let apiResust = await fetch(url);
-            apiResust = await apiResust.json();
-            console.log(apiResust);
+        // async function apiHandling() {
+        //     const url = "https://dummyjson.com/products";
+        //     let apiResust = await fetch(url);
+        //     apiResust = await apiResust.json();
+        //     console.log(apiResust);
 
-        }
-        apiHandling();
+        // }
+        // apiHandling();
+
+        async function apiHandling() {
+    const url = "https://dummyjson.com/products";
+    let apiResust = await fetch(url);   // data mangaya
+    apiResust = await apiResust.json(); // JSON ko object banaya
+    console.log(apiResust);             // data print
+}
+apiHandling();
 
     </script>
 </body>
