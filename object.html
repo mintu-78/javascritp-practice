@@ -19,57 +19,83 @@
         //     }
         // }
         // let key="age"
-    let iphone = {
-        brand: "Apple",
-        model: "iPhone 17 pro",
-        price: 120000,
-        specs: {
-            ram: "8GB",
-            storage: "256GB",
-            camera: "48MP",
-            battery: "4500mAh"
-        }
-    }
+    // let iphone = {
+    //     brand: "Apple",
+    //     model: "iPhone 17 pro",
+    //     price: 120000,
+    //     specs: {
+    //         ram: "8GB",
+    //         storage: "256GB",
+    //         camera: "48MP",
+    //         battery: "4500mAh"
+    //     }
+    // }
 
-    // // 1. Direct access
-    // console.log(iphone.model); // iPhone 17
+    // // // 1. Direct access
+    // // console.log(iphone.model); // iPhone 17
 
-    // // 2. Bracket access
-    // let key = "price";
-    // console.log(iphone[key]); // 120000
+    // // // 2. Bracket access
+    // // let key = "price";
+    // // console.log(iphone[key]); // 120000
 
-    // // 3. Nested object
-    // console.log(iphone.specs.camera); // 48MP
+    // // // 3. Nested object
+    // // console.log(iphone.specs.camera); // 48MP
 
-    // // 4. Update price
-    // iphone.price = 115000;
+    // // // 4. Update price
+    // // iphone.price = 115000;
 
-    // // 5. Add new property
-    // iphone.color = "Black";
+    // // // 5. Add new property
+    // // iphone.color = "Black";
 
-    // // 6. Delete property
-    // delete iphone.brand;
+    // // // 6. Delete property
+    // // delete iphone.brand;
 
-    // 7. Loop
-    for(let key in iphone){
-        console.log(key, ":", iphone[key]);
-    }
-        // console.log(userDetails[key]);
-        // console.log(userDetails["age"]);
-        // console.log(userDetails.age);
-        // console.log(userDetails.name);
-        // userDetails.name="mintu kumar"
+    // // 7. Loop
+    // for(let key in iphone){
+    //     console.log(key, ":", iphone[key]);
+    // }
+    //     // console.log(userDetails[key]);
+    //     // console.log(userDetails["age"]);
+    //     // console.log(userDetails.age);
+    //     // console.log(userDetails.name);
+    //     // userDetails.name="mintu kumar"
 
-        // delete userDetails.city
+    //     // delete userDetails.city
 
-        // console.log(userDetails.address.houseNo);
+    //     // console.log(userDetails.address.houseNo);
         
 
-        // // for(let key in userDetails){
-        // //     console.log(userDetails[key]);
+    //     // // for(let key in userDetails){
+    //     // //     console.log(userDetails[key]);
             
-        // }
-        
+    //     // }
+        let student = {
+    name: "Mintu Kumar",
+    age: 22,
+    course: "BCA",
+    skills: ["HTML", "CSS", "JavaScript"],
+    address: {
+        city: "Patna",
+        state: "Bihar"
+    }
+};
+
+console.log(student.name);
+
+let key = "course";
+console.log(student[key]);
+
+console.log(student.address.city);
+
+student.age = 23;
+
+student.college = "ABC College";
+
+delete student.skills;
+
+for (let key in student) {
+    console.log(key + " : " + student[key]);
+}
     </script>
 </body>
 </html>
