@@ -21,7 +21,7 @@
         let lastCall = 0;
         function handleScroll() {
             let now = Date.now();
-            if (now - lastCall >= 2000) {
+            if (now - lastCall >= 1000) {
                 lastCall = now;
                 callAPI()
             }
