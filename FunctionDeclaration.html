@@ -16,14 +16,28 @@
         // }
 
 
-        function fruit(item, a, b, c) { //parameter
-            console.log(item);
+        // function fruit(item, a, b, c) { //parameter
+        //     console.log(item);
 
-        }
-        console.log(fruit.length);
+        // }
+        // console.log(fruit.length);
 
 
-        fruit("mango", "banana", "orange", "pineapple"); //argument
+        // fruit("mango", "banana", "orange", "pineapple"); //argument
+
+        function fruit(f1, f2, f3, f4) {
+    console.log("First fruit:", f1);
+    console.log("Second fruit:", f2);
+    console.log("Total arguments passed:", arguments.length);
+    console.log("All arguments:", arguments);
+}
+
+console.log("Total parameters:", fruit.length);
+
+fruit("Mango", "Banana", "Orange", "Pineapple");
+
+console.log("Type of function:", typeof fruit);
+console.log("Is function object?", fruit instanceof Object);
 
         // console.log(typeof fruit);
         // console.log(fruit instanceof Object);
